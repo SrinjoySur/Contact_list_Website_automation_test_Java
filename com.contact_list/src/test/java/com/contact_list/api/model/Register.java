@@ -19,23 +19,23 @@ public class Register {
         private String password;
         public RegisterBuilder(){
         }
-        RegisterBuilder withFirstName(String firstName){
+        public RegisterBuilder withFirstName(String firstName){
             this.firstName=firstName;
             return this;
         }
-        RegisterBuilder withLastName(String lastName){
+        public RegisterBuilder withLastName(String lastName){
             this.lastName=lastName;
             return this;
         }
-        RegisterBuilder withEmail(String email){
+        public RegisterBuilder withEmail(String email){
             this.email=email;
             return this;
         }
-        RegisterBuilder withPassword(String password){
+        public RegisterBuilder withPassword(String password){
             this.password=password;
             return this;
         }
-        Register build(){
+        public Register build(){
             return new Register(this);
         }
     }

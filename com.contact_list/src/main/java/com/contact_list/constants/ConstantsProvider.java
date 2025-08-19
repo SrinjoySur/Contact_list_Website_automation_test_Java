@@ -14,4 +14,5 @@ public class ConstantsProvider {
     public static final String SIGN_IN_ENDPOINT = BASE_URI;
     public static final String SIGN_UP_ENDPOINT = BASE_URI + "addUser";
     public static final String CONTACT_LIST_ENDPOINT = BASE_URI +"contactList";
+    public static final String API_REGISTER_ENDPOINT = BASE_URI +"users";
 }
