@@ -16,7 +16,6 @@ import java.nio.file.Paths;
 
 import static com.contact_list.ui.factories.WebDriverFactory.getThreadLocalDriver;
 import static com.contact_list.ui.factories.WebDriverFactory.setThreadLocalDriver;
-import static com.contact_list.utils.ScreenshotUtils.getCount;
 import static com.contact_list.utils.ScreenshotUtils.saveScreenshot;
 
 
@@ -36,8 +35,8 @@ public class WebDriverHook {
     public void takeScreenshot(Scenario scenario) {
         if (scenario.isFailed()) {
                 saveScreenshot(getThreadLocalDriver());
-                try(InputStream is= Files.newInputStream(Paths.get(ConstantsProvider.screenshotsDirPath+"/failure"+getCount()+"_screenshot.png"))){
-                    Allure.addAttachment(getThreadLocalDriver().getTitle()+"_"+getCount()+"_failed.png",is);
+                try(InputStream is= Files.newInputStream(Paths.get(ConstantsProvider.screenshotsDirPath+"/failure"+scenario.getName()+"_screenshot.png"))){
+                    Allure.addAttachment(scenario.getName()+"_failed.png",is);
                 }
             }
     }

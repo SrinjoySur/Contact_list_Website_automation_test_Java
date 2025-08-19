@@ -20,8 +20,4 @@ public class ScreenshotUtils {
         File destFile = new File(ConstantsProvider.screenshotsDirPath + "/failure" + count + "_screenshot.png");
         FileHandler.copy(srcFile, destFile);
     }
-
-    public static int getCount() {
-        return count;
-    }
 }
