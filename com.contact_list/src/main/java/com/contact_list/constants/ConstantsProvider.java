@@ -12,6 +12,6 @@ public class ConstantsProvider {
      */
     public static final String BASE_URI = ConfigReader.getInstance().getProperty("base.uri");
     public static final String SIGN_IN_ENDPOINT = BASE_URI;
-    public static final String SIGN_UP_ENDPOINT = BASE_URI + "/addUser";
-
+    public static final String SIGN_UP_ENDPOINT = BASE_URI + "addUser";
+    public static final String CONTACT_LIST_ENDPOINT = BASE_URI +"contactList";
 }

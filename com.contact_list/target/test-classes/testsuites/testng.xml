@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Gym-App-Test-Suite" parallel="true" data-provider-thread-count="9">
+    <listeners>
+        <listener class-name="com.contact_list.listeners.TestListener"/>
+    </listeners>
+    <test name="API Test">
+        <classes>
+            <class name="com.contact_list.runner.ApiRunner"/>
+        </classes>
+    </test>
+    <test name="Chrome Test">
+        <parameter name="Browser" value="CHROME"/>
+        <classes>
+            <class name="com.contact_list.runner.UiRunner"/>
+        </classes>
+    </test>
+    <test name="Edge Test">
+        <parameter name="Browser" value="EDGE"/>
+        <classes>
+            <class name="com.contact_list.runner.UiRunner"/>
+        </classes>
+    </test>
+</suite>
