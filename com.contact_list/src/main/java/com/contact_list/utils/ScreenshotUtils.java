@@ -11,13 +11,11 @@ import java.io.IOException;
 
 public class ScreenshotUtils {
     private static volatile TakesScreenshot screenshot;
-    private static int count = 0;
 
-    public static void saveScreenshot(WebDriver driver) throws IOException {
-        count++;
+    public static void saveScreenshot(WebDriver driver,String name) throws IOException {
         screenshot = (TakesScreenshot) driver;
         File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        File destFile = new File(ConstantsProvider.screenshotsDirPath + "/failure" + count + "_screenshot.png");
+        File destFile = new File(ConstantsProvider.screenshotsDirPath + "/failure" + name + "_screenshot.png");
         FileHandler.copy(srcFile, destFile);
     }
 }

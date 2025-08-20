@@ -20,7 +20,6 @@ import static com.contact_list.utils.ScreenshotUtils.saveScreenshot;
 
 
 public class WebDriverHook {
-    private static WebDriver driver;
     ConfigReader configReader = ConfigReader.getInstance();
 
     @Before
@@ -34,7 +33,7 @@ public class WebDriverHook {
     @After(order = 1)
     public void takeScreenshot(Scenario scenario) {
         if (scenario.isFailed()) {
-                saveScreenshot(getThreadLocalDriver());
+                saveScreenshot(getThreadLocalDriver(),scenario.getName());
                 try(InputStream is= Files.newInputStream(Paths.get(ConstantsProvider.screenshotsDirPath+"/failure"+scenario.getName()+"_screenshot.png"))){
                     Allure.addAttachment(scenario.getName()+"_failed.png",is);
                 }

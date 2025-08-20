@@ -6,16 +6,16 @@ public class TokenManager {
     private static final ConcurrentHashMap<String, String> tokenStore = new ConcurrentHashMap<>();
 
     // Store token per role
-    public static void storeToken(String role, String token) {
-        tokenStore.put(role.toLowerCase(), token);
+    public static void storeToken(String email, String token) {
+        tokenStore.put(email, token);
     }
 
     // Retrieve token by role
-    public static String getToken(String role) {
-        if (!tokenStore.containsKey(role.toLowerCase())) {
+    public static String getToken(String email) {
+        if (!tokenStore.containsKey(email)) {
             return null;
         }
-        return tokenStore.get(role.toLowerCase());
+        return tokenStore.get(email.toLowerCase());
     }
 
     // Clear tokens (if needed, for cleanup between tests)

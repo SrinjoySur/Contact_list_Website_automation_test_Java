@@ -1,9 +1,21 @@
+@allure.label.epic:API
 Feature: Registration Features for API
   Background:
-    Given User has endpoint for Registration
+    Given User has request specifications for Registration
+  @allure.label.suite:Registration
+  @allure.label.subSuite:Valid_Registration
     Scenario Template: Valid Registration
-      When User sends a request with First Name "<firstName>", Last Name "<lastName>", Email "<email>" and Password "<password>"
+      When User sends a post request with First Name "<firstName>", Last Name "<lastName>", Email "<email>" and Password "<password>"
       Then User receives Success Response
+      And User Validates response for Correct Json Schema
       Examples:
       |firstName|lastName|email|password|
-      | Example        |   User     |   johnson90@email.com  |  #John123      |
+      | Example        |   User     |   johnson300@email.com  |  #John123      |
+  @allure.label.subSuite:Invalid_Registration
+    Scenario Template: Invalid Registration
+    When User sends a post request with First Name "<firstName>", Last Name "<lastName>", Email "<email>" and Password "<password>"
+    Then User receives Error Response
+    And User receives "<message>" in response
+    Examples:
+      |firstName|lastName|email|password|message|
+      |         |    User    |   johnson300@email.com  |  #John123      |    User validation failed: firstName: Path `firstName` is required.   |

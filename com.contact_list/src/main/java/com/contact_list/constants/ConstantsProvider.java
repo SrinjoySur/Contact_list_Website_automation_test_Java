@@ -5,14 +5,12 @@ import com.contact_list.utils.ConfigReader;
 public class ConstantsProvider {
     public static final String configPath = "src/main/resources/config/config.properties";
     public static final String screenshotsDirPath = System.getProperty("user.dir") + "/screenshots";
-    public static final String jsonSchemasDir = "src/test/resources/jsonschemas";
-    /**
-     * The below constants are defined for backend APIs. These include
-     * various endpoints
-     */
+    public static final String jsonSchemasDir =ConfigReader.getInstance().getProperty("josnschemas.dir") ;
     public static final String BASE_URI = ConfigReader.getInstance().getProperty("base.uri");
-    public static final String SIGN_IN_ENDPOINT = BASE_URI;
+    public static final String SIGN_IN_ENDPOINT = BASE_URI+"users/login";
     public static final String SIGN_UP_ENDPOINT = BASE_URI + "addUser";
     public static final String CONTACT_LIST_ENDPOINT = BASE_URI +"contactList";
     public static final String API_REGISTER_ENDPOINT = BASE_URI +"users";
+    public static final String DELETE_USER_ENDPOINT = BASE_URI +"users/me";
+    public static final String REGISTER_SCHEMA= ConfigReader.getInstance().getProperty("register.schema");
 }

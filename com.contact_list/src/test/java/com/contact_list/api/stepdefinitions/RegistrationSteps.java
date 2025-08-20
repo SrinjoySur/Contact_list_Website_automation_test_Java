@@ -2,15 +2,22 @@ package com.contact_list.api.stepdefinitions;
 
 import com.contact_list.api.manager.RequestSpecificationManager;
 import com.contact_list.api.model.Register;
+import io.cucumber.java.PendingException;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.apache.http.HttpStatus;
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
 
 import static com.contact_list.constants.ConstantsProvider.API_REGISTER_ENDPOINT;
+import static com.contact_list.constants.ConstantsProvider.REGISTER_SCHEMA;
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.containsString;
 
 public class RegistrationSteps {
     private Response response;
@@ -31,5 +38,23 @@ public class RegistrationSteps {
     public void userReceivesSuccessResponse() {
         // Write code here that turns the phrase above into concrete actions
         response.then().assertThat().statusCode(HttpStatus.SC_CREATED);
+    }
+
+    @And("User Validates response for Correct Json Schema")
+    public void userValidatesResponseForCorrectJsonSchema() {
+        // Write code here that turns the phrase above into concrete actions
+        response.then().assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath(REGISTER_SCHEMA));
+    }
+
+    @Then("User receives Error Response")
+    public void userReceivesErrorResponse() {
+        // Write code here that turns the phrase above into concrete actions
+        response.then().assertThat().statusCode(HttpStatus.SC_BAD_REQUEST);
+    }
+
+    @And("User receives {string} in response")
+    public void userReceivesInResponse(String message) {
+        // Write code here that turns the phrase above into concrete actions
+        response.then().assertThat().body("message", containsString(message));
     }
 }

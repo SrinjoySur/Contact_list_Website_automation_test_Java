@@ -10,7 +10,7 @@ import org.testng.annotations.Parameters;
 
 @CucumberOptions(
         features = {"src/test/resources/features/ui"},
-        glue = {"com.contact_list.ui.stepdefinitions","com.contact_list.hooks"},
+        glue = {"com.contact_list.ui.stepdefinitions","com.contact_list.api.stepdefinitions","com.contact_list.hooks"},
         plugin = {"pretty", "html:target/cucumber","html:target/cucumber-reports.html","io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm","rerun:target/failedrerun.txt"},
         tags = "not @ignore",
         monochrome = true
