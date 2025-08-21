@@ -26,7 +26,7 @@ public class CommonUtils {
 
         if (response.statusCode() == 200) {
             sessionClientId = response.jsonPath().getString("user.id");
-            return response.jsonPath().getString("tokens.accessToken");
+            return response.jsonPath().getString("token");
         } else {
             throw new RuntimeException("Failed to generate token for user: " + email);
         }

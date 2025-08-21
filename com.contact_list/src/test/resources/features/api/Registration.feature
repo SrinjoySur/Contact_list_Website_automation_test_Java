@@ -8,6 +8,8 @@ Feature: Registration Features for API
       When User sends a post request with First Name "<firstName>", Last Name "<lastName>", Email "<email>" and Password "<password>"
       Then User receives Success Response
       And User Validates response for Correct Json Schema
+#      When User sends a delete request for the user with credentials "<email>" and "<password>"
+#      Then User should receive OK response
       Examples:
       |firstName|lastName|email|password|
       | Example        |   User     |   johnson300@email.com  |  #John123      |
