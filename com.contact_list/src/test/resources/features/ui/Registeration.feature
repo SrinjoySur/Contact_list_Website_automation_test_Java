@@ -24,3 +24,6 @@ Feature: Registration Feature for UI
     Examples:
       |firstName|lastName|email|password|error|
       |         |   User     |   johnson100@email.com  |  #John123      |User validation failed: firstName: Path `firstName` is required.|
+      |   User      |        |   johnson100@email.com  |  #John123      |User validation failed: lastName: Path `lastName` is required.|
+    |      hi       |    hi    |                         |        Hii#123        |             User validation failed: email: Email is invalid                                                 |
+    |       hi        |    hi      |      hi@email.com                   |                       |                               User validation failed: password: Path `password` is required.                                                                              |

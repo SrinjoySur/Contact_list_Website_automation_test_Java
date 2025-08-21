@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5dc2e2d-e7db-469b-98d0-97bc0594b64f" name="Changes" comment="chore: updated delete user code">
+    <list default="true" id="a5dc2e2d-e7db-469b-98d0-97bc0594b64f" name="Changes" comment="feat: ui test for invalid registration created">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.contact_list/src/main/java/com/contact_list/utils/WebDriverUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/src/main/java/com/contact_list/utils/WebDriverUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.contact_list/src/test/java/com/contact_list/ui/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/src/test/java/com/contact_list/ui/base/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.contact_list/src/test/java/com/contact_list/ui/pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/src/test/java/com/contact_list/ui/pages/RegistrationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.contact_list/src/test/java/com/contact_list/ui/stepdefinitions/RegistrationSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/src/test/java/com/contact_list/ui/stepdefinitions/RegistrationSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.contact_list/src/test/resources/features/api/Registration.feature" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/src/test/resources/features/api/Registration.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com.contact_list/src/test/resources/features/ui/Registeration.feature" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/src/test/resources/features/ui/Registeration.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com.contact_list/target/cucumber" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/target/cucumber" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com.contact_list/target/cucumber-reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/target/cucumber-reports.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.contact_list/target/failedrerun.txt" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/target/failedrerun.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.contact_list/target/test-classes/features/api/DeleteUser.feature" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/target/test-classes/features/api/DeleteUser.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.contact_list/target/test-classes/features/api/Registration.feature" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/target/test-classes/features/api/Registration.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com.contact_list/target/test-classes/features/ui/Registeration.feature" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/target/test-classes/features/ui/Registeration.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -214,7 +208,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755755312182</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="feat: ui test for invalid registration created">
+      <option name="closed" value="true" />
+      <created>1755756021610</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1755756021610</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -229,6 +231,7 @@
     <MESSAGE value="chore: updated Authenticate" />
     <MESSAGE value="fix: Corrected delete user code" />
     <MESSAGE value="chore: updated delete user code" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: updated delete user code" />
+    <MESSAGE value="feat: ui test for invalid registration created" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: ui test for invalid registration created" />
   </component>
 </project>
