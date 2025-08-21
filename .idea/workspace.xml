@@ -4,30 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5dc2e2d-e7db-469b-98d0-97bc0594b64f" name="Changes" comment="feat: created json schema for registration request's response">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com.contact_list/src/test/java/com/contact_list/hooks/APIHook.java" afterDir="false" />
+    <list default="true" id="a5dc2e2d-e7db-469b-98d0-97bc0594b64f" name="Changes" comment="feat: created delete user api endpoint test code and invalid add user test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.contact_list/screenshots/failure1_screenshot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.contact_list/screenshots/random.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.contact_list/src/main/java/com/contact_list/constants/ConstantsProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/src/main/java/com/contact_list/constants/ConstantsProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.contact_list/src/main/java/com/contact_list/utils/ScreenshotUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/src/main/java/com/contact_list/utils/ScreenshotUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.contact_list/src/main/resources/config/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/src/main/resources/config/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.contact_list/src/test/java/com/contact_list/api/stepdefinitions/RegistrationSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/src/test/java/com/contact_list/api/stepdefinitions/RegistrationSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.contact_list/src/test/java/com/contact_list/api/util/CommonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/src/test/java/com/contact_list/api/util/CommonUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.contact_list/src/test/java/com/contact_list/api/util/TokenManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/src/test/java/com/contact_list/api/util/TokenManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.contact_list/src/test/java/com/contact_list/hooks/WebDriverHook.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/src/test/java/com/contact_list/hooks/WebDriverHook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.contact_list/src/test/java/com/contact_list/runner/UiRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/src/test/java/com/contact_list/runner/UiRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.contact_list/src/test/resources/features/api/Registration.feature" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/src/test/resources/features/api/Registration.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.contact_list/src/test/resources/features/ui/Registeration.feature" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/src/test/resources/features/ui/Registeration.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.contact_list/src/test/resources/testsuites/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/src/test/resources/testsuites/testng.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.contact_list/target/classes/config/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/target/classes/config/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.contact_list/target/cucumber" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/target/cucumber" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.contact_list/target/cucumber-reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/target/cucumber-reports.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.contact_list/target/failedrerun.txt" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/target/failedrerun.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.contact_list/target/test-classes/features/api/Registration.feature" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/target/test-classes/features/api/Registration.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.contact_list/target/test-classes/features/ui/Registeration.feature" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/target/test-classes/features/ui/Registeration.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.contact_list/target/test-classes/testsuites/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/com.contact_list/target/test-classes/testsuites/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +144,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755599267821</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: created delete user api endpoint test code and invalid add user test">
+      <option name="closed" value="true" />
+      <created>1755683851709</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1755683851709</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -176,6 +162,7 @@
     <MESSAGE value="feat: Registration tests for API created" />
     <MESSAGE value="chore: corrected vocab for features in Registration tests for API created" />
     <MESSAGE value="feat: created json schema for registration request's response" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: created json schema for registration request's response" />
+    <MESSAGE value="feat: created delete user api endpoint test code and invalid add user test" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: created delete user api endpoint test code and invalid add user test" />
   </component>
 </project>
