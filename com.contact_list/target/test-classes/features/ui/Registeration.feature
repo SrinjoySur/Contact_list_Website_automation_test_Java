@@ -9,7 +9,8 @@ Feature: Registration Feature for UI
       And User enters Email "<email>" and Password "<password>"
       And User clicks on Submit button
       Then User is redirected to Contact List page
-      When User sends a delete request for the user with credentials "<email>" and "<password>"
+      Given User has token for Authentication of user with credentials "<email>" and "<password>"
+      When User sends a delete request
       Then User should receive OK response
       Examples:
       |firstName|lastName|email|password|

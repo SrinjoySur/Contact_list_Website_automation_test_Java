@@ -1,2 +1,1 @@
-file:src/test/resources/features/api/DeleteUser.feature:12
-file:src/test/resources/features/api/Registration.feature:15
+file:src/test/resources/features/api/Registration.feature:16

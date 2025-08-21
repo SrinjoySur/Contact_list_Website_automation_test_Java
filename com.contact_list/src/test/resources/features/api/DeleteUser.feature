@@ -1,12 +1,13 @@
 @allure.label.epic:API
 Feature: Scenarios for deleting users
-  Background:
-    Given User has request specifications for Deleting Users
+#  Background:
+#    Given User has token for Authentication of user with credentials "<email>" and "<password>"
     @allure.label.suite:Delete_User
       @allure.label.subSuite:Delete_Existing_User
     Scenario Template: Deleting existing User
-      When User sends a delete request for the user with credentials "<email>" and "<password>"
+      Given User has token for Authentication of user with credentials "<email>" and "<password>"
+      When User sends a delete request
       Then User should receive OK response
       Examples:
       |email|password|
-#      |   johnson100@email.com  |  #John123      |
+      |   johnson300@email.com  |  #John123      |
