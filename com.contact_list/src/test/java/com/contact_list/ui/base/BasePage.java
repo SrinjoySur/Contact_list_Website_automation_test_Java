@@ -13,7 +13,6 @@ import java.time.Duration;
 import java.util.List;
 
 import static com.contact_list.hooks.WebDriverHook.getDriver;
-import static com.contact_list.utils.WebDriverUtils.getCurrentUrl;
 
 public abstract class BasePage {
 
@@ -41,10 +40,10 @@ public abstract class BasePage {
         return new FluentWait<>(getDriver()).withTimeout(Duration.ofSeconds(durations)).pollingEvery(Duration.ofSeconds(poll)).ignoring(TimeoutException.class);
     }
 
-    public String verifyUrl() {
-        waitUntilUrlToBe("https://frontend-run8-1-team5-frontend-dev.development.krci-dev.cloudmentor.academy/login");
-        return getCurrentUrl(getDriver());
-    }
+//    public String verifyUrl() {
+//        waitUntilUrlToBe("https://frontend-run8-1-team5-frontend-dev.development.krci-dev.cloudmentor.academy/login");
+//        return getCurrentUrl(getDriver());
+//    }
 
     /**
      * Overriding default implementation of findElement with Explicit wait addon
@@ -60,7 +59,7 @@ public abstract class BasePage {
         return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
     }
 
-    public boolean waitUntilUrlToBe(String url) {
-        return wait.until(ExpectedConditions.urlToBe(url));
+    public void waitUntilUrlToBe(String url) {
+        wait.until(ExpectedConditions.urlToBe(url));
     }
 }

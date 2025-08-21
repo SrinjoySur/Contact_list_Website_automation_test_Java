@@ -2,6 +2,8 @@ package com.contact_list.utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
 
 public class WebDriverUtils {
 
@@ -19,5 +21,9 @@ public class WebDriverUtils {
 
     public static String getCurrentUrl(WebDriver driver) {
         return driver.getCurrentUrl();
+    }
+
+    public static void waitForVisibility(Wait wait, WebElement element){
+        wait.until(ExpectedConditions.visibilityOf(element));
     }
 }

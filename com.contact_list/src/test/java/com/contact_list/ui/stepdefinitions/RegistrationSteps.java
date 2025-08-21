@@ -1,6 +1,7 @@
 package com.contact_list.ui.stepdefinitions;
 
 import com.contact_list.ui.pages.RegistrationPage;
+import io.cucumber.java.PendingException;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -54,5 +55,11 @@ public class RegistrationSteps {
         registrationPage.waitUntilUrlToBe(CONTACT_LIST_ENDPOINT);
         assertEquals(driver.getCurrentUrl(),CONTACT_LIST_ENDPOINT);
         
+    }
+
+    @Then("User should get Error {string}")
+    public void userShouldGetError(String error) {
+        // Write code here that turns the phrase above into concrete actions
+        assertEquals(registrationPage.getError(),error);
     }
 }

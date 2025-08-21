@@ -5,8 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import static com.contact_list.utils.WebDriverUtils.click;
-import static com.contact_list.utils.WebDriverUtils.sendKeys;
+import static com.contact_list.utils.WebDriverUtils.*;
+
 public class RegistrationPage extends BasePage {
     public RegistrationPage(WebDriver driver){
         super(driver);
@@ -16,6 +16,7 @@ public class RegistrationPage extends BasePage {
     private final By  emailTxtArea=By.id("email");
     private final By  passwordTxtArea=By.id("password");
     public final By submitBtn=By.id("submit");
+    public final By error=By.id("error");
     public final By cancelBtn=By.id("cancel");
     public void enterFirstName(String firstName){
         WebElement element=driver.findElement(firstNameTxtArea);
@@ -36,5 +37,10 @@ public class RegistrationPage extends BasePage {
     public void clickSubmit(){
         WebElement element=driver.findElement(submitBtn);
         click(element);
+    }
+    public String getError(){
+        WebElement element=driver.findElement(error);
+        waitForVisibility(getWebDriverWait(100),element);
+        return getText(element);
     }
 }

@@ -15,3 +15,12 @@ Feature: Registration Feature for UI
       Examples:
       |firstName|lastName|email|password|
       | Example        |   User     |   johnson100@email.com  |  #John123      |
+  @allure.label.subSuite:Invalid_Registration
+  Scenario Template: Invalid Registration
+    When User enters First Name "<firstName>" and Last Name "<lastName>"
+    And User enters Email "<email>" and Password "<password>"
+    And User clicks on Submit button
+    Then User should get Error "<error>"
+    Examples:
+      |firstName|lastName|email|password|error|
+      |         |   User     |   johnson100@email.com  |  #John123      |User validation failed: firstName: Path `firstName` is required.|

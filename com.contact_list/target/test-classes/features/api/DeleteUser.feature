@@ -10,4 +10,4 @@ Feature: Scenarios for deleting users
       Then User should receive OK response
       Examples:
       |email|password|
-#      |   johnson300@email.com  |  #John123      |
+      |   johnson300@email.com  |  #John123      |
