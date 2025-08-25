@@ -1,10 +1,10 @@
 @allure.label.epic:API
-Feature: Registration Features for API
+Feature: Sign Up Features for API
   Background:
-    Given User has request specifications for Registration
-  @allure.label.suite:Registration
-  @allure.label.subSuite:Valid_Registration
-    Scenario Template: Valid Registration
+    Given User has request specifications for Sign Up
+  @allure.label.suite:Sign_Up
+  @allure.label.subSuite:Valid_Sign_Up
+    Scenario Template: Valid Sign Up
       When User sends a post request with First Name "<firstName>", Last Name "<lastName>", Email "<email>" and Password "<password>"
       Then User receives Success Response
       And User Validates response for Correct Json Schema
@@ -14,8 +14,8 @@ Feature: Registration Features for API
       Examples:
       |firstName|lastName|email|password|
       | Example        |   User     |   johnson300@email.com  |  #John123      |
-  @allure.label.subSuite:Invalid_Registration
-    Scenario Template: Invalid Registration
+  @allure.label.subSuite:Invalid_Sign_Up
+    Scenario Template: Invalid Sign Up
     When User sends a post request with First Name "<firstName>", Last Name "<lastName>", Email "<email>" and Password "<password>"
     Then User receives Error Response
     And User receives "<message>" in response

@@ -1,12 +1,12 @@
 package com.contact_list.api.model;
 import lombok.Data;
 @Data
-public class Register {
+public class SignUp {
     private String firstName;
     private String lastName;
     private String email;
     private String password;
-    public Register(RegisterBuilder builder){
+    public SignUp(RegisterBuilder builder){
         this.firstName = builder.firstName;
         this.lastName= builder.lastName;
         this.email=builder.email;
@@ -35,8 +35,8 @@ public class Register {
             this.password=password;
             return this;
         }
-        public Register build(){
-            return new Register(this);
+        public SignUp build(){
+            return new SignUp(this);
         }
     }
 }

@@ -1,11 +1,8 @@
 package com.contact_list.api.util;
 
-import com.contact_list.api.model.Authenticate;
+import com.contact_list.api.model.SignIn;
 import com.contact_list.constants.ConstantsProvider;
 import io.restassured.response.Response;
-
-import java.time.LocalDate;
-import java.util.List;
 
 import static io.restassured.RestAssured.given;
 
@@ -14,7 +11,7 @@ public class CommonUtils {
     public static String sessionClientId;
 
     public static String generateAuthToken(String email, String password) {
-        Authenticate auth = new Authenticate.AuthBuilder().withEmail(email).withPassword(password).build();
+        SignIn auth = new SignIn.SignInBuilder().withEmail(email).withPassword(password).build();
 
         Response response = given()
                 .contentType("application/json")

@@ -11,3 +11,7 @@ Feature: Login Feature for UI
     Examples:
     | email | password|
     | demobro@email.com      |  #Demo123       |
+    | demo_tester@email.com  |  #Demo123       |
+    | demo2tester@email.org  |  @Demo123       |
+    | jona@email.com         |  @Jona123       |
+    | daily@email.org        | @Daily123       |

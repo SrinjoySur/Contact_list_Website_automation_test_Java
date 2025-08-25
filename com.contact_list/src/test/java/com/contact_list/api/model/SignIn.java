@@ -3,27 +3,27 @@ package com.contact_list.api.model;
 import lombok.Data;
 
 @Data
-public class Authenticate {
+public class SignIn {
     private String email;
     private String password;
-    public Authenticate(AuthBuilder builder){
+    public SignIn(SignInBuilder builder){
         this.email=builder.email;
         this.password=builder.password;
     }
-    public static class AuthBuilder{
+    public static class SignInBuilder {
         private String email;
         private String password;
 
-        public AuthBuilder withEmail(String email) {
+        public SignInBuilder withEmail(String email) {
             this.email=email;
             return this;
         }
-        public AuthBuilder withPassword(String password){
+        public SignInBuilder withPassword(String password){
             this.password=password;
             return this;
         }
-        public Authenticate build(){
-            return new Authenticate(this);
+        public SignIn build(){
+            return new SignIn(this);
         }
     }
 }
