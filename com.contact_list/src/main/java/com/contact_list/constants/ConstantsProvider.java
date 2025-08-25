@@ -7,6 +7,7 @@ public class ConstantsProvider {
     public static final String screenshotsDirPath = System.getProperty("user.dir") + "/screenshots";
     public static final String jsonSchemasDir =ConfigReader.getInstance().getProperty("josnschemas.dir") ;
     public static final String BASE_URI = ConfigReader.getInstance().getProperty("base.uri");
+    public static final String LOG_IN_ENDPOINT = BASE_URI + "login";
     public static final String SIGN_IN_ENDPOINT = BASE_URI+"users/login";
     public static final String SIGN_UP_ENDPOINT = BASE_URI + "addUser";
     public static final String CONTACT_LIST_ENDPOINT = BASE_URI +"contactList";

@@ -22,3 +22,6 @@ Feature: Registration Features for API
     Examples:
       |firstName|lastName|email|password|message|
       |         |    User    |   johnson300@email.com  |  #John123      |    User validation failed: firstName: Path `firstName` is required.   |
+    |    User     |            |          johnson300@email.com               |        #John123        |                        User validation failed: lastName: Path `lastName` is required.                                               |
+    |      User       |     User       |                                             |           John123             |                                             User validation failed: email: Email is invalid                                                                                        |
+    |        User     |        User    |                johnson300@email.com                             |                        |                                                           User validation failed: password: Path `password` is required.                                                                          |

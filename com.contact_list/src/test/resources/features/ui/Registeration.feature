@@ -27,3 +27,7 @@ Feature: Registration Feature for UI
       |   User      |        |   johnson100@email.com  |  #John123      |User validation failed: lastName: Path `lastName` is required.|
     |      hi       |    hi    |                         |        Hii#123        |             User validation failed: email: Email is invalid                                                 |
     |       hi        |    hi      |      hi@email.com                   |                       |                               User validation failed: password: Path `password` is required.                                                                              |
+    @allure.label.subSuite:Cancel
+    Scenario: Cancel Registration
+    When User clicks on Cancel Button
+    Then User is redirected to login page

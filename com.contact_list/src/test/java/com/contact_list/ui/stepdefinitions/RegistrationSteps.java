@@ -9,9 +9,7 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 
 
-import static com.contact_list.constants.ConstantsProvider.CONTACT_LIST_ENDPOINT;
-import static com.contact_list.constants.ConstantsProvider.SIGN_UP_ENDPOINT;
-
+import static com.contact_list.constants.ConstantsProvider.*;
 import static com.contact_list.ui.factories.WebDriverFactory.getThreadLocalDriver;
 import static org.testng.Assert.assertEquals;
 
@@ -61,5 +59,17 @@ public class RegistrationSteps {
     public void userShouldGetError(String error) {
         // Write code here that turns the phrase above into concrete actions
         assertEquals(registrationPage.getError(),error);
+    }
+
+    @When("User clicks on Cancel Button")
+    public void userClicksOnCancelButton() {
+        // Write code here that turns the phrase above into concrete actions
+        registrationPage.clickCancel();
+    }
+
+    @Then("User is redirected to login page")
+    public void userIsRedirectedToLoginPage() {
+        // Write code here that turns the phrase above into concrete actions
+        assertEquals(driver.getCurrentUrl(),LOG_IN_ENDPOINT);
     }
 }

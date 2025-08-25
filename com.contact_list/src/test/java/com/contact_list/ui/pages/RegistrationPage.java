@@ -43,4 +43,8 @@ public class RegistrationPage extends BasePage {
         waitForVisibility(getWebDriverWait(100),element);
         return getText(element);
     }
+    public void clickCancel(){
+        WebElement element=driver.findElement(cancelBtn);
+        click(element);
+    }
 }
