@@ -12,7 +12,7 @@ import io.restassured.specification.RequestSpecification;
 import org.apache.http.HttpStatus;
 
 import static com.contact_list.constants.ConstantsProvider.API_REGISTER_ENDPOINT;
-import static com.contact_list.constants.ConstantsProvider.REGISTER_SCHEMA;
+import static com.contact_list.constants.ConstantsProvider.SIGN_UP_SCHEMA;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.containsString;
 
@@ -40,7 +40,7 @@ public class SignUpSteps {
     @And("User Validates response for Correct Json Schema")
     public void userValidatesResponseForCorrectJsonSchema() {
         // Write code here that turns the phrase above into concrete actions
-        response.then().assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath(REGISTER_SCHEMA));
+        response.then().assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath(SIGN_UP_SCHEMA));
     }
 
     @Then("User receives Error Response")

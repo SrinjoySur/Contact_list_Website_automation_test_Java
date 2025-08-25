@@ -13,5 +13,6 @@ public class ConstantsProvider {
     public static final String CONTACT_LIST_ENDPOINT = BASE_URI +"contactList";
     public static final String API_REGISTER_ENDPOINT = BASE_URI +"users";
     public static final String DELETE_USER_ENDPOINT = BASE_URI +"users/me";
-    public static final String REGISTER_SCHEMA= ConfigReader.getInstance().getProperty("register.schema");
+    public static final String SIGN_UP_SCHEMA = ConfigReader.getInstance().getProperty("signUp.schema");
+    public static final String SIGN_IN_SCHEMA = ConfigReader.getInstance().getProperty("signIn.schema");
 }
