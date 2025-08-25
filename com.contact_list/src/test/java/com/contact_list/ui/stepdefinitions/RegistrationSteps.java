@@ -21,7 +21,6 @@ public class RegistrationSteps {
         // Write code here that turns the phrase above into concrete actions
         registrationPage =new RegistrationPage(driver);
         registrationPage.goToUrl(SIGN_UP_ENDPOINT);
-        System.out.println(driver.getCurrentUrl());
     }
 
     @When("User enters First Name {string} and Last Name {string}")
