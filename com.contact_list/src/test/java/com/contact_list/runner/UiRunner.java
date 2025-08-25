@@ -12,7 +12,7 @@ import org.testng.annotations.Parameters;
         features = {"src/test/resources/features/ui"},
         glue = {"com.contact_list.ui.stepdefinitions","com.contact_list.api.stepdefinitions","com.contact_list.hooks"},
         plugin = {"pretty", "html:target/cucumber","html:target/cucumber-reports.html","io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm","rerun:target/failedrerun.txt"},
-        tags = "not @ignore",
+        tags = "not @Skip",
         monochrome = true
 )
 public class UiRunner extends AbstractTestNGCucumberTests {
